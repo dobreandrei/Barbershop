@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gentlemen Cut</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />	
+	<link href="css/font-awesome.min.css" rel="stylesheet"/>
+	<link rel="shortcut icon" type="image/png" href="img/logo_mobile.png"/>
+</head>
+<body>
+
+    <header>
+    <div id="header-inner">
+    
+        <a href="index.html" id="logo">   </a>
+        <nav>
+            <a href="#" id="menu-icon"></a>
+            <ul>
+
+                <li><a href="prices.html"> Prices</a> </li>
+                <li><a href="appointments.html"> Appointments</a> </li>
+                <li><a href="team.html"> Our Team</a> </li>
+                <li><a href="contact.html"> Contact</a> </li>
+
+            </ul>
+
+        </nav> 
+    </div>
+    </header>
+<!--End Header-->
+
+    <section class="banner">
+    
+        <div class="banner-inner">
+            <img src="img/banner_image_alt.png">
+        </div>  
+           
+    </section>
+<!--End Banner-->
+
+<section class="inner-wrapper" id="blended-wrapper">
+    <div class="generic_wrapper"> <img src="img/tinyhouse1.png" alt=""/></div>
+   
+    <div class="generic_wrapper" id="sheet">
+        <div class ="contact-container">
+        <h2> <i class="fa fa-phone-square"></i> 555-145-897 <i class="fa fa-phone-square"></i></h2>   
+        <h2> <i class="fa fa-envelope"></i> frontdesk@gentbarber.uk <i class="fa fa-envelope"></i></h2>
+        <h2> <i class="fa fa-street-view"></i> 231 Stoke Newington Church St
+            London, England <i class="fa fa-street-view"></i></h2> </div> 
+
+        <div id="map"></div>
+    </div>  
+    
+<!--  Map Script   -->
+    
+  </section>   
+ 
+
+<script>
+   function initMap(){
+       
+    var options = {
+        zoom:14,
+        center:{lat:51.559429,lng:-0.086662}
+        
+      };
+      
+    var map = new google.maps.Map(document.getElementById('map'), options);
+    
+    
+    var marker = new google.maps.Marker({
+        position:{lat:51.559429,lng:-0.086662},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+      
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h4>The Gentlemen Cut</h4>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      
+      
+   }
+</script>
+    
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqJTJQCrVB0Tgn-4-txgW7meSmSGr2EWs&callback=initMap">
+</script>   
+    
+
+ <footer>
+    
+    <ul class="social">
+        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      
+    </ul>
+
+</footer>
+
+<footer class="second">
+    
+    <p>&COPY;Andrei Dobre</p>
+    
+</footer>   
+    
+    
